@@ -1,15 +1,25 @@
 #
 # Makefile for UNIX - unrar
 
-# Linux using GCC
+# IBM i using GCC
 CXX=c++
-CXXFLAGS=-O2 -Wno-logical-op-parentheses -Wno-switch -Wno-dangling-else
-LIBFLAGS=-fPIC
-DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP
-STRIP=strip
-AR=ar
-LDFLAGS=-pthread
-DESTDIR=/usr
+CXXFLAGS=-O2
+#LIBFLAGS=-fPIC
+DEFINES=-D_LARGE_FILES -D_LARGE_FILE_API -D_THREAD_SAFE
+#STRIP=strip
+#AR=ar
+LDFLAGS=-pthread -lutil -s
+#DESTDIR=/usr
+
+# Linux using GCC
+#CXX=c++
+#CXXFLAGS=-O2 -Wno-logical-op-parentheses -Wno-switch -Wno-dangling-else
+#LIBFLAGS=-fPIC
+#DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP
+#STRIP=strip
+#AR=ar
+#LDFLAGS=-pthread
+#DESTDIR=/usr
 
 # Linux using LCC
 #CXX=lcc
