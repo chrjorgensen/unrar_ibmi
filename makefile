@@ -155,7 +155,6 @@ clean:
 unrar:	clean $(OBJECTS) $(UNRAR_OBJ)
 	@rm -f unrar
 	$(LINK) -o unrar $(LDFLAGS) $(OBJECTS) $(UNRAR_OBJ) $(LIBS)	
-	$(STRIP) unrar
 
 sfx:	WHAT=SFX_MODULE
 sfx:	clean $(OBJECTS)
