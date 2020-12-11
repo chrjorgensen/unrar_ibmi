@@ -9,7 +9,7 @@ DEFINES=-D_LARGE_FILES -D_LARGE_FILE_API -D_THREAD_SAFE
 #STRIP=strip
 #AR=ar
 LDFLAGS=-pthread -lutil -s
-#DESTDIR=/usr
+DESTDIR=/QOpenSys/pkgs
 
 # Linux using GCC
 #CXX=c++
